@@ -134,7 +134,7 @@ class FinetuningArguments(FreezeArguments, LoraArguments, RLHFArguments):
         metadata={"help": "Which stage will be performed in training."}
     )
     finetuning_type: Optional[Literal["lora", "freeze", "full"]] = field(
-        default="lora",
+        default="full",
         metadata={"help": "Which fine-tuning method to use."}
     )
     upcast_layernorm: Optional[bool] = field(
